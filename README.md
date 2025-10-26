@@ -1,4 +1,4 @@
-# 🚀 Flipkart Clone Deployment — Spring Boot + MySQL + Docker + AWS EC2
+# 🚀 Simple Login page(JWT Authentication) — Spring Boot + MySQL + Docker + AWS EC2
 
 ##Overview
 This project is a simple **Flipkart-style e-commerce backend** built using **Spring Boot** and **MySQL**, containerized using **Docker**, and deployed on **AWS EC2**.  
@@ -64,12 +64,12 @@ Once everything works fine, create the `.jar` file.
    | Custom TCP | 9099       | 0.0.0.0/0 |
 
    
-## ⚙️Step 8: Run application container
+## ⚙️Step 8: Start container with JDK image:
      1> Previously we builded jar that jar take here in ec2 machine in current directoy 
            $docker run -d --name myapp --network mynet openjdk:17-jdk-slim /bin/bash
             here one window will appear give cmd $exit and give below cmd
 
-            $docker cp flipkart-0.0.1-SNAPSHOT.jar myapp:/tmp/
+            $docker cp flipkart-0.0.1-SNAPSHOT.jar myapp:/tmp/    ( copy jar inside container) 
 
      2> now we have taken this jar inside container now go inside container using below cmd 
         $docker exec -it b0dcc6887c70 /bin/bash
